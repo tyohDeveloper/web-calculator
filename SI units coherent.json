@@ -1,0 +1,249 @@
+{
+  "radian": {
+    "name": "radian",
+    "symbol": "rad",
+    "components": [
+      {
+        "unit": "metre",
+        "exponent": 1,
+        "symbol": "m"
+      },
+      {
+        "unit": "metre",
+        "exponent": -1,
+        "symbol": "m⁻¹"
+      }
+    ]
+  },
+  "steradian": {
+    "name": "steradian",
+    "symbol": "sr",
+    "components": [
+      {
+        "unit": "metre",
+        "exponent": "2",
+        "symbol": "m²"
+      },
+      {
+        "unit": "metre",
+        "exponent": "-2",
+        "symbol": "m⁻²"
+      }
+    ]
+  },
+  "hertz": {
+    "name": "hertz",
+    "symbol": "Hz",
+    "components": [
+      {
+        "unit": "second",
+        "exponent": "-1",
+        "symbol": "s⁻¹"
+      }
+    ]
+  },
+  "newton": {
+    "name": "newton",
+    "symbol": "N",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": 1,
+        "symbol": "kg"
+      },
+      {
+        "unit": "metre",
+        "exponent": 1,
+        "symbol": "m"
+      },
+      {
+        "unit": "second",
+        "exponent": -2,
+        "symbol": "s⁻²"
+      }
+    ]
+  },
+  "pascal": {
+    "name": "pascal",
+    "symbol": "Pa",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": 1,
+        "symbol": "kg"
+      },
+      {
+        "unit": "metre",
+        "exponent": -1,
+        "symbol": "m⁻¹"
+      },
+      {
+        "unit": "second",
+        "exponent": -2,
+        "symbol": "s⁻²"
+      }
+    ]
+  },
+  "joule": {
+    "name": "joule",
+    "symbol": "J",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": 1,
+        "symbol": "kg"
+      },
+      {
+        "unit": "metre",
+        "exponent": 2,
+        "symbol": "m²"
+      },
+      {
+        "unit": "second",
+        "exponent": -2,
+        "symbol": "s⁻²"
+      }
+    ]
+  },
+  "watt": {
+    "name": "watt",
+    "symbol": "W",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": 1,
+        "symbol": "kg"
+      },
+      {
+        "unit": "metre",
+        "exponent": 2,
+        "symbol": "m²"
+      },
+      {
+        "unit": "second",
+        "exponent": -3,
+        "symbol": "s⁻³"
+      }
+    ]
+  },
+  "coulomb": {
+    "name": "coulomb",
+    "symbol": "C",
+    "components": [
+      {
+        "unit": "second",
+        "exponent": 1,
+        "symbol": "s"
+      },
+      {
+        "unit": "ampere",
+        "exponent": 1,
+        "symbol": "A"
+      }
+    ]
+  },
+  "volt": {
+    "name": "volt",
+    "symbol": "V",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": 1,
+        "symbol": "kg"
+      },
+      {
+        "unit": "kilogram",
+        "exponent": 2,
+        "symbol": "m²"
+      },
+      {
+        "unit": "second",
+        "exponent": -3,
+        "symbol": "s⁻³"
+      },
+      {
+        "unit": "Ampere",
+        "exponent": -1,
+        "symbol": "A⁻¹"
+      }
+    ]
+  },
+  "farad": {
+    "name": "farad",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": -1,
+        "symbol": "kg⁻¹"
+      },
+      {
+        "unit": "metre",
+        "exponent": -2,
+        "symbol": "m⁻²"
+      },
+      {
+        "unit": "second",
+        "exponent": 4,
+        "symbol": "s⁴"
+      },
+      {
+        "unit": "ampere",
+        "exponent": 2,
+        "symbol": "A²"
+      }
+    ],
+    "symbol": "F"
+  },
+  "ohm": {
+    "unit": "ohm",
+    "symbol": "Ω",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": -1,
+        "symbol": "kg⁻¹"
+      },
+      {
+        "unit": "metre",
+        "exponent": -2,
+        "symbol": "m⁻²"
+      },
+      {
+        "unit": "second",
+        "exponent": 4,
+        "symbol": "s⁴"
+      },
+      {
+        "unit": "ampere",
+        "exponent": 2,
+        "symbol": "A²"
+      }
+    ]
+  },
+  "siemens": {
+    "unit": "siemens",
+    "components": [
+      {
+        "unit": "kilogram",
+        "exponent": -1,
+        "symbol": "kg⁻¹"
+      },
+      {
+        "unit": "meter",
+        "exponent": -2,
+        "symbol": "m⁻²"
+      },
+      {
+        "unit": "second",
+        "exponent": 3,
+        "symbol": "s³"
+      },
+      {
+        "unit": "ampere",
+        "exponent": 2,
+        "symbol": "A²"
+      }
+    ],
+    "symbol": "S"
+  }
+}
