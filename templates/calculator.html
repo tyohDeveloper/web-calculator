@@ -264,6 +264,7 @@
             <form action="/calculate" method="post">
                 <input type="number" name="num1" step="any" placeholder="Enter first number" required>
                 <div class="operations">
+                    <!-- Basic Operations -->
                     <button type="submit" name="operation" value="+">+</button>
                     <button type="submit" name="operation" value="-">−</button>
                     <button type="submit" name="operation" value="*">×</button>
@@ -271,8 +272,20 @@
                     <button type="submit" name="operation" value="%">%</button>
                     <button type="submit" name="operation" value="^">xⁿ</button>
                     <button type="submit" name="operation" value="sqrt">√</button>
+                    <!-- Scientific Operations -->
+                    <button type="submit" name="operation" value="sin">sin</button>
+                    <button type="submit" name="operation" value="cos">cos</button>
+                    <button type="submit" name="operation" value="tan">tan</button>
+                    <button type="submit" name="operation" value="asin">sin⁻¹</button>
+                    <button type="submit" name="operation" value="acos">cos⁻¹</button>
+                    <button type="submit" name="operation" value="atan">tan⁻¹</button>
+                    <button type="submit" name="operation" value="log">log₁₀</button>
+                    <button type="submit" name="operation" value="ln">ln</button>
+                    <button type="submit" name="operation" value="exp">eˣ</button>
+                    <button type="submit" name="operation" value="abs">|x|</button>
+                    <button type="submit" name="operation" value="fact">x!</button>
                 </div>
-                <input type="number" name="num2" step="any" placeholder="Enter second number (not needed for square root)">
+                <input type="number" name="num2" step="any" placeholder="Enter second number (not needed for scientific functions)">
             </form>
         </div>
 
