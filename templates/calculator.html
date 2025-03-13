@@ -49,7 +49,7 @@
             transform: translateY(1px);
             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
-        input[type="text"], input[type="number"] {
+        input[type="text"], input[type="number"], select {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
@@ -58,7 +58,7 @@
             font-size: 1.1em;
             transition: border-color 0.2s ease;
         }
-        input[type="text"]:focus, input[type="number"]:focus {
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
             border-color: #007bff;
             outline: none;
             box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
@@ -136,6 +136,70 @@
         .history li:last-child {
             border-bottom: none;
         }
+        .quality-select {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .quality-select label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #495057;
+        }
+        .quality-select .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .quality-select select {
+            flex-grow: 1;
+        }
+        .quality-select button {
+            white-space: nowrap;
+            padding: 12px 20px;
+            background-color: #28a745;
+        }
+        .quality-select button:hover {
+            background-color: #218838;
+        }
+        /* Dialog styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 500px;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #666;
+        }
+        .close:hover {
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -145,6 +209,40 @@
             <form action="/quit" method="post" onsubmit="return confirm('Are you sure you want to quit?');">
                 <button type="submit">Quit</button>
             </form>
+        </div>
+
+        <div class="quality-select">
+            <label for="si_quality">SI Quality Level:</label>
+            <div class="controls">
+                <select id="si_quality" name="si_quality">
+                    <option value="1">Basic (1 decimal place)</option>
+                    <option value="2">Standard (2 decimal places)</option>
+                    <option value="3">High (3 decimal places)</option>
+                    <option value="4">Scientific (4 decimal places)</option>
+                    <option value="5">Ultra (5 decimal places)</option>
+                </select>
+                <button type="button" onclick="openUnitsDialog()">Edit Units</button>
+            </div>
+        </div>
+
+        <!-- Units Dialog -->
+        <div id="unitsDialog" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeUnitsDialog()">&times;</span>
+                <h2>Edit Units</h2>
+                <div class="unit-options">
+                    <label>
+                        <input type="radio" name="unit_system" value="metric" checked> Metric (SI)
+                    </label>
+                    <label>
+                        <input type="radio" name="unit_system" value="imperial"> Imperial
+                    </label>
+                    <label>
+                        <input type="radio" name="unit_system" value="custom"> Custom
+                    </label>
+                </div>
+                <button onclick="saveUnits()">Save Changes</button>
+            </div>
         </div>
 
         <div class="memory">
@@ -210,6 +308,29 @@
             // Show/hide content with animation
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             document.getElementById(`${tab}-calc`).classList.add('active');
+        }
+
+        function openUnitsDialog() {
+            document.getElementById('unitsDialog').style.display = 'block';
+        }
+
+        function closeUnitsDialog() {
+            document.getElementById('unitsDialog').style.display = 'none';
+        }
+
+        function saveUnits() {
+            // Get selected unit system
+            const unitSystem = document.querySelector('input[name="unit_system"]:checked').value;
+            // Here you can add logic to handle the unit system change
+            closeUnitsDialog();
+        }
+
+        // Close dialog when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('unitsDialog');
+            if (event.target == modal) {
+                closeUnitsDialog();
+            }
         }
     </script>
 </body>
