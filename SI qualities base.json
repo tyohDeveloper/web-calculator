@@ -1,0 +1,69 @@
+{
+  "time": {
+    "name": "time",
+    "SI-unit": "second",
+    "dimension-symbol": "T",
+    "typical-symbols": [
+      "t",
+      "𝑡"
+    ]
+  },
+  "length": {
+    "name": "length",
+    "SI-unit": "metre",
+    "dimension-symbol": "L",
+    "typical-symbols": [
+      "l",
+      "𝑙",
+      "𝑥",
+      "𝘳"
+    ]
+  },
+  "mass": {
+    "name": "mass",
+    "SI-unit": "kilogram",
+    "dimension-symbol": "M",
+    "typical-symbols": [
+      "m",
+      "𝑚"
+    ]
+  },
+  "electric-current": {
+    "name": "electric-current",
+    "SI-unit": "ampere",
+    "dimension-symbol": "I",
+    "typical-symbols": [
+      "i",
+      "𝐼",
+      "𝑖"
+    ]
+  },
+  "thermodynamic-temperature": {
+    "name": "thermodynamic-temperature",
+    "SI-unit": "kelvin",
+    "dimension-symbol": "K",
+    "typical-symbols": [
+      "t",
+      "T",
+      "𝑡",
+      "𝑇"
+    ]
+  },
+  "amount-of-substance": {
+    "name": "amount-of-substance",
+    "SI-unit": "mole",
+    "dimension-symbol": "N",
+    "typical-symbols": [
+      "𝑎",
+      "a"
+    ]
+  },
+  "luminous-intensity": {
+    "name": "luminous-intensity",
+    "SI-unit": "candela",
+    "dimension-symbol": "J",
+    "typical-symbols": [
+      "𝐼v"
+    ]
+  }
+}
