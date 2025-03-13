@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .calculator {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .memory, .history {
+            margin: 20px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+        }
+        .operations {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .result {
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 4px;
+        }
+        .calculation-tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            background: #f8f9fa;
+        }
+        .tab.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .quit-button {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .quit-button button {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Web Calculator</h1>
+        <div class="quit-button" style="text-align: right; margin-bottom: 10px;">
+            <form action="/quit" method="post" onsubmit="return confirm('Are you sure you want to quit?');">
+                <button type="submit" style="background-color: #dc3545;">Quit</button>
+            </form>
+        </div>
+
+        <div class="memory">
+            <h3>Memory: {{ memory }}</h3>
+            <form action="/memory" method="post">
+                <input type="number" name="value" step="any" placeholder="Enter value to store">
+                <button type="submit" name="action" value="store">Store</button>
+                <button type="submit" name="action" value="recall">Recall</button>
+                <button type="submit" name="action" value="clear">Clear</button>
+            </form>
+        </div>
+
+        <div class="calculation-tabs">
+            <div class="tab active" onclick="switchTab('basic')">Basic Calculator</div>
+            <div class="tab" onclick="switchTab('expression')">Expression Parser</div>
+        </div>
+
+        <div id="basic-calc" class="tab-content active">
+            <form action="/calculate" method="post">
+                <input type="number" name="num1" step="any" placeholder="Enter first number" required>
+                <div class="operations">
+                    <button type="submit" name="operation" value="+">+</button>
+                    <button type="submit" name="operation" value="-">-</button>
+                    <button type="submit" name="operation" value="*">×</button>
+                    <button type="submit" name="operation" value="/">÷</button>
+                    <button type="submit" name="operation" value="%">%</button>
+                    <button type="submit" name="operation" value="^">^</button>
+                    <button type="submit" name="operation" value="sqrt">√</button>
+                </div>
+                <input type="number" name="num2" step="any" placeholder="Enter second number (not needed for square root)">
+            </form>
+        </div>
+
+        <div id="expression-calc" class="tab-content">
+            <form action="/calculate" method="post">
+                <input type="text" name="expression" placeholder="Enter expression (e.g., (2 + 3) * 4)" required>
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+
+        {% if result %}
+        <div class="result">
+            Result: {{ result }}
+        </div>
+        {% endif %}
+
+        <div class="history">
+            <h3>Calculation History</h3>
+            <ul>
+            {% for calc in history %}
+                <li>{{ calc }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            // Update tab styling
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.tab[onclick*="${tab}"]`).classList.add('active');
+
+            // Show/hide content
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(`${tab}-calc`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
