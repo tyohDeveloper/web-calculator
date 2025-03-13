@@ -200,6 +200,29 @@
         .close:hover {
             color: #000;
         }
+        /* Add styles for the input container */
+        .input-container {
+            position: relative;
+            margin: 20px 0;
+        }
+        .swap-button {
+            position: absolute;
+            right: -45px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 8px 12px;
+            background: #6c757d;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.2s ease;
+        }
+        .swap-button:hover {
+            background: #5a6268;
+            transform: translateY(-50%) scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -262,7 +285,11 @@
 
         <div id="basic-calc" class="tab-content active">
             <form action="/calculate" method="post">
-                <input type="number" name="num1" step="any" placeholder="Enter first number" required>
+                <div class="input-container">
+                    <input type="number" name="num1" id="num1" step="any" placeholder="Enter first number" required>
+                    <button type="button" class="swap-button" onclick="swapNumbers()">⇄</button>
+                    <input type="number" name="num2" id="num2" step="any" placeholder="Enter second number (not needed for scientific functions)">
+                </div>
                 <div class="operations">
                     <!-- Basic Operations -->
                     <button type="submit" name="operation" value="+">+</button>
@@ -285,7 +312,6 @@
                     <button type="submit" name="operation" value="abs">|x|</button>
                     <button type="submit" name="operation" value="fact">x!</button>
                 </div>
-                <input type="number" name="num2" step="any" placeholder="Enter second number (not needed for scientific functions)">
             </form>
         </div>
 
@@ -344,6 +370,14 @@
             if (event.target == modal) {
                 closeUnitsDialog();
             }
+        }
+
+        function swapNumbers() {
+            const num1 = document.getElementById('num1');
+            const num2 = document.getElementById('num2');
+            const temp = num1.value;
+            num1.value = num2.value;
+            num2.value = temp;
         }
     </script>
 </body>
