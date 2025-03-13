@@ -1,0 +1,129 @@
+{
+  "prefixes": {
+    "quetta": {
+      "name": "quetta",
+      "exponent": 30,
+      "symbol": "Q"
+    },
+    "ronna": {
+      "name": "ronna",
+      "exponent": 27,
+      "symbol": "R"
+    },
+    "yotta": {
+      "name": "yotta",
+      "exponenr": 24,
+      "symbol": "y"
+    },
+    "zetta": {
+      "name": "zetta",
+      "exponent": 21,
+      "symbol": "Z"
+    },
+    "exa": {
+      "name": "exa",
+      "exponent": 18,
+      "symbol": "E"
+    },
+    "peta": {
+      "name": "peta",
+      "exponent": 15,
+      "symbol": "P"
+    },
+    "tera": {
+      "name": "tera",
+      "exponent": 12,
+      "symbol": "T"
+    },
+    "giga": {
+      "name": "giga",
+      "exponent": 9,
+      "symbol": "G"
+    },
+    "mega": {
+      "name": "mega",
+      "exponent": 6,
+      "symbol": "M"
+    },
+    "kilo": {
+      "name": "kilo",
+      "exponent": 3,
+      "symbol": "k"
+    },
+    "hecto": {
+      "name": "hecto",
+      "exponent": 2,
+      "symbol": "h"
+    },
+    "deca": {
+      "name": "deca",
+      "exponent": 1,
+      "symbol": "da"
+    },
+    "unity": {
+      "name": "unity",
+      "exponent": "0",
+      "symbol": ""
+    },
+    "deci": {
+      "name": "deci",
+      "exponent": -1,
+      "symbol": "d"
+    },
+    "centi": {
+      "name": "centi",
+      "exponent": -2,
+      "symbol": "c"
+    },
+    "milli": {
+      "name": "milli",
+      "exponent": -3,
+      "symbol": "m"
+    },
+    "micro": {
+      "name": "micro",
+      "exponent": -6,
+      "symbol": "μ"
+    },
+    "nano": {
+      "name": "nano",
+      "exponent": -9,
+      "symbol": "n"
+    },
+    "pico": {
+      "name": "pico",
+      "exponent": -12,
+      "symbol": "p"
+    },
+    "femto": {
+      "name": "femto",
+      "exponent": -15,
+      "symbol": "f"
+    },
+    "atto": {
+      "name": "atto",
+      "exponent": -18,
+      "symbol": "a"
+    },
+    "zepto": {
+      "name": "zepto",
+      "exponent": -21,
+      "symbol": "z"
+    },
+    "yocto": {
+      "name": "yocto",
+      "exponent": -24,
+      "symbol": "y"
+    },
+    "ronto": {
+      "name": "ronto",
+      "exponent": -27,
+      "symbol": "r"
+    },
+    "quecto": {
+      "name": "quecto",
+      "exponent": -30,
+      "symbol": "q"
+    }
+  }
+}
