@@ -157,12 +157,32 @@
         .quality-select select {
             flex-grow: 1;
         }
-        .quality-select button {
-            white-space: nowrap;
-            padding: 12px 20px;
+        .unit-options {
+            margin: 20px 0;
+        }
+        .unit-options label {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .unit-options label:hover {
+            background: #f8f9fa;
+            border-color: #007bff;
+        }
+        .unit-options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .modal-content button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
             background-color: #28a745;
         }
-        .quality-select button:hover {
+        .modal-content button:hover {
             background-color: #218838;
         }
         /* Dialog styles */
@@ -351,6 +371,8 @@
 
         function openUnitsDialog() {
             document.getElementById('unitsDialog').style.display = 'block';
+            // Add animation class
+            document.querySelector('.modal-content').classList.add('slideIn');
         }
 
         function closeUnitsDialog() {
@@ -360,7 +382,18 @@
         function saveUnits() {
             // Get selected unit system
             const unitSystem = document.querySelector('input[name="unit_system"]:checked').value;
-            // Here you can add logic to handle the unit system change
+
+            // Update UI based on selection
+            const qualitySelect = document.getElementById('si_quality');
+            if (unitSystem === 'metric') {
+                qualitySelect.disabled = false;
+            } else if (unitSystem === 'imperial') {
+                qualitySelect.value = '2'; // Set to standard precision for imperial
+                qualitySelect.disabled = true;
+            }
+
+            // Close dialog with feedback
+            alert('Unit settings updated successfully!');
             closeUnitsDialog();
         }
 
@@ -371,6 +404,13 @@
                 closeUnitsDialog();
             }
         }
+
+        // Close dialog when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeUnitsDialog();
+            }
+        });
 
         function swapNumbers() {
             const num1 = document.getElementById('num1');
