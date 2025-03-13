@@ -1,0 +1,40 @@
+{
+  "second": {
+    "name": "second",
+    "symbol": "s",
+    "quality": "time"
+  },
+  "metre": {
+    "name": "metre",
+    "localized-name": {
+      "US": "meter"
+    },
+    "symbol": "m",
+    "quality": "length"
+  },
+  "kilogram": {
+    "name": "kilogram",
+    "symbol": "kg",
+    "quality": "mass"
+  },
+  "ampere": {
+    "name": "ampere",
+    "symbol": "A",
+    "quality": "electric current"
+  },
+  "kelvin": {
+    "name": "kelvin",
+    "symbol": "K",
+    "quality": "thermodynamic temperature "
+  },
+  "mole": {
+    "name": "mole",
+    "symbol": "mol",
+    "quality": "amount of substance"
+  },
+  "candela": {
+    "name": "candela",
+    "symbol": "cd",
+    "quality": "luminous intensity"
+  }
+}
