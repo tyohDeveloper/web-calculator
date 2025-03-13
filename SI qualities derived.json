@@ -1,0 +1,81 @@
+{
+  "area": {
+    "SI-unit": "metre",
+    "name": "area",
+    "typical-symbols": [
+      "A",
+      "𝖠"
+    ],
+    "exponent": "2",
+    "symbol": "&unit;²"
+  },
+  "volume": {
+    "name": "volume",
+    "SI-unit": "cubic-metre",
+    "typical-symbols": [
+      "V"
+    ],
+    "symbol": "&unit;³"
+  },
+  "speed": {
+    "name": "speed",
+    "SI-unit": "metre-per-second",
+    "typical-symbols": [
+      "𝑣"
+    ]
+  },
+  "velocity": {
+    "name": "velocity",
+    "SI-unit": "metre-per-second",
+    "typical-symbols": [
+      "𝑣"
+    ]
+  },
+  "acceleration": {
+    "name": "acceleration",
+    "SI-unit": "metre-per-second-squared",
+    "typical-symbols": [
+      "𝑎"
+    ]
+  },
+  "wavenumber": {
+    "name": "wavenumber",
+    "SI-unit": "reciprocal-metre"
+  },
+  "vergence": {
+    "name": "vergence",
+    "SI-unit": "reciprocal-metre"
+  },
+  "density": {
+    "name": "density",
+    "SI-unit": "kilogram-per-cubic-metre"
+  },
+  "surface-density": {
+    "name": "surface-density",
+    "SI-unit": "kilogram-per-square-metre"
+  },
+  "specific-volume": {
+    "name": "specific-volume",
+    "SI-unit": "cubic-metre-per-kilogram"
+  },
+  "current-density": {
+    "name": "current-density",
+    "SI-unit": "ampere-per-square-metre"
+  },
+  "magnetic-field-strength": {
+    "name": "magnetic-field-strength",
+    "SI-unit": "ampere-per-square-metre"
+  },
+  "concentration": {
+    "name": "concentration",
+    "SI-unit": "mole-per-cubic-metre"
+  },
+  "mass-concentration": {
+    "name": "mass-concentration",
+    "SI-unit": "kilogram-per-cubic-metre"
+  },
+  "luminance": {
+    "name": "luminance",
+    "SI-unit": "candela-per-square-metre"
+  }
+}
