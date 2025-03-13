@@ -1,0 +1,121 @@
+{
+  "dynamic-viscosity": {
+    "name": "dynamic-viscosity",
+    "SI-unit": "pascal-second"
+  },
+  "moment-of-force": {
+    "name": "moment-of-force",
+    "SI-unit": "newton-metre"
+  },
+  "surface-tension": {
+    "name": "surface-tension",
+    "SI-unit": "newton-per-metre"
+  },
+  "angular-velocity": {
+    "name": "angular-velocity",
+    "SI-unit": "radian-per-second"
+  },
+  "angular-frequency": {
+    "name": "angular-frequency",
+    "SI-unit": "radian-per-second"
+  },
+  "angular-acceleration": {
+    "name": "angular-acceleration",
+    "SI-unit": "radian-per-second-squared"
+  },
+  "heat-flux-density": {
+    "name": "heat-flux-density",
+    "SI-unit": "watt-per-square-metre"
+  },
+  "irradiance": {
+    "name": "irradiance",
+    "SI-unit": "watt-per-square-metre"
+  },
+  "entropy": {
+    "name": "entropy",
+    "SI-unit": "joule-per-kelvin"
+  },
+  "heat-capacity": {
+    "name": "heat-capacity",
+    "SI-unit": "joule-per-kelvin"
+  },
+  "specific-heat-capacity": {
+    "name": "specific-heat-capacity",
+    "SI-unit": "joule-per-kilogram-kelvin"
+  },
+  "specific-entropy": {
+    "name": "specific-entropy",
+    "SI-unit": "joule-per-kilogram-kelvin"
+  },
+  "specific-energy": {
+    "name": "specific-energy",
+    "SI-unit": "joule-per-kilogram"
+  },
+  "thermal-conductivity": {
+    "name": "thermal-conductivity",
+    "SI-unit": "watt-per-metre-kelvin"
+  },
+  "energy-density": {
+    "name": "energy-density",
+    "SI-unit": "joule-per-cubic-metre"
+  },
+  "electric-field-strength": {
+    "name": "electric-field-strength",
+    "SI-unit": "volt-per-metre"
+  },
+  "electric-charge-density": {
+    "name": "electric-charge-density",
+    "SI-unit": "coulomb-per-cubic-metre"
+  },
+  "surface-charge-density": {
+    "name": "surface-charge-density",
+    "SI-unit": "coulomb-per-square-metre"
+  },
+  "electric-flux-density": {
+    "name": "electric-flux-density",
+    "SI-unit": "coulomb-per-square-metre"
+  },
+  "electric-displacement": {
+    "name": "electric-displacement",
+    "SI-unit": "coulomb-per-square-metre"
+  },
+  "permittivity": {
+    "name": "permittivity"
+  },
+  "permeability": {
+    "name": "permeability",
+    "SI-units": "henry-per-metre"
+  },
+  "molar-energy": {
+    "name": "molar-energy",
+    "SI-unit": "joule-per-mole"
+  },
+  "molar-entropy": {
+    "name": "molar-entropy",
+    "SI-unit": "joule-per-mole-kelvin"
+  },
+  "molar-heat-capacity": {
+    "name": "molar-heat-capacity",
+    "SI-unit": "joule-per-mole-kelvin"
+  },
+  "exposure": {
+    "name": "exposure",
+    "SI-unit": "coulomb-per-kilogram"
+  },
+  "absorbed-dose-rate": {
+    "name": "absorbed-dose-rate",
+    "SI-unit": "gray-per-second"
+  },
+  "radiant intensity": {
+    "name": "radiant-intensity",
+    "SI-unit": "watt-per-steradian"
+  },
+  "radiance": {
+    "name": "radiance",
+    "SI-unit": "watt-per-square-metre-steradian"
+  },
+  "catalytic-activity-concentration": {
+    "name": "catalytic-activity-concentration",
+    "SI-unit": "katal-per-cubic-metre"
+  }
+}
