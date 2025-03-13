@@ -1,0 +1,68 @@
+{
+  "base": {
+    "divisor": "",
+    "multiplier": "",
+    "new-offset": "",
+    "offset": "",
+    "unit": ""
+  },
+  "component": {
+    "exponent": "",
+    "unit": ""
+  },
+  "domain": {
+    "qualities": {
+
+    },
+    "standards": {
+
+    }
+  },
+  "localized": {
+    "locale": "",
+    "text": ""
+  },
+  "quality": {
+    "dimension-symbol": "",
+    "name": "",
+    "names": {
+
+    },
+    "SI-unit": "",
+    "typical-symbols": [
+
+    ]
+  },
+  "standard": {
+    "name": "",
+    "names": {
+
+    },
+    "required": [
+
+    ],
+    "units": {
+
+    }
+  },
+  "unit": {
+    "base": {
+
+    },
+    "components": [
+
+    ],
+    "localized-name": {
+
+    },
+    "name": "",
+    "SI-base": {
+
+    },
+    "symbol": ""
+  },
+  "value": {
+    "amount": "",
+    "unit": ""
+  }
+}
