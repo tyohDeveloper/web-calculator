@@ -243,6 +243,40 @@
             background: #5a6268;
             transform: translateY(-50%) scale(1.1);
         }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .standards-options {
+            margin: 20px 0;
+        }
+        .standards-options label {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .standards-options label:hover {
+            background: #f8f9fa;
+            border-color: #007bff;
+        }
+        .standards-options input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .standards-category {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .standards-category h3 {
+            margin: 0 0 10px 0;
+            color: #495057;
+        }
     </style>
 </head>
 <body>
@@ -264,7 +298,10 @@
                     <option value="4">Scientific (4 decimal places)</option>
                     <option value="5">Ultra (5 decimal places)</option>
                 </select>
-                <button type="button" onclick="openUnitsDialog()">Edit Units</button>
+                <div class="button-group">
+                    <button type="button" onclick="openUnitsDialog()">Edit Units</button>
+                    <button type="button" onclick="openStandardsDialog()">Standards</button>
+                </div>
             </div>
         </div>
 
@@ -285,6 +322,43 @@
                     </label>
                 </div>
                 <button onclick="saveUnits()">Save Changes</button>
+            </div>
+        </div>
+
+        <!-- Standards Dialog -->
+        <div id="standardsDialog" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeStandardsDialog()">&times;</span>
+                <h2>Select Standards</h2>
+
+                <div class="standards-category">
+                    <h3>Measurement Standards</h3>
+                    <div class="standards-options">
+                        <label>
+                            <input type="checkbox" name="standard" value="iso"> ISO (International Organization for Standardization)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="standard" value="astm"> ASTM International
+                        </label>
+                        <label>
+                            <input type="checkbox" name="standard" value="din"> DIN (German Institute for Standardization)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="standards-category">
+                    <h3>Scientific Standards</h3>
+                    <div class="standards-options">
+                        <label>
+                            <input type="checkbox" name="standard" value="nist"> NIST (National Institute of Standards and Technology)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="standard" value="iec"> IEC (International Electrotechnical Commission)
+                        </label>
+                    </div>
+                </div>
+
+                <button onclick="saveStandards()">Apply Standards</button>
             </div>
         </div>
 
@@ -399,16 +473,27 @@
 
         // Close dialog when clicking outside
         window.onclick = function(event) {
-            const modal = document.getElementById('unitsDialog');
-            if (event.target == modal) {
-                closeUnitsDialog();
-            }
+            const modals = [
+                document.getElementById('unitsDialog'),
+                document.getElementById('standardsDialog')
+            ];
+
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    if (modal.id === 'unitsDialog') {
+                        closeUnitsDialog();
+                    } else if (modal.id === 'standardsDialog') {
+                        closeStandardsDialog();
+                    }
+                }
+            });
         }
 
         // Close dialog when pressing Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeUnitsDialog();
+                closeStandardsDialog();
             }
         });
 
@@ -418,6 +503,27 @@
             const temp = num1.value;
             num1.value = num2.value;
             num2.value = temp;
+        }
+
+        function openStandardsDialog() {
+            document.getElementById('standardsDialog').style.display = 'block';
+            document.querySelector('#standardsDialog .modal-content').classList.add('slideIn');
+        }
+
+        function closeStandardsDialog() {
+            document.getElementById('standardsDialog').style.display = 'none';
+        }
+
+        function saveStandards() {
+            const selectedStandards = Array.from(document.querySelectorAll('input[name="standard"]:checked'))
+                .map(checkbox => checkbox.value);
+
+            // Here you can add logic to handle the selected standards
+            console.log('Selected standards:', selectedStandards);
+
+            // Show feedback to user
+            alert('Standards updated successfully!');
+            closeStandardsDialog();
         }
     </script>
 </body>
