@@ -1,0 +1,106 @@
+{
+  "plane-angle": {
+    "name": "plane-angle",
+    "si-unit": "radian"
+  },
+  "solid-angle": {
+    "name": "solid-angle",
+    "SI-unit": "steradian"
+  },
+  "frequency": {
+    "name": "frequency",
+    "SI-unit": "hertz"
+  },
+  "force": {
+    "name": "force",
+    "SI-unit": "newton"
+  },
+  "pressure": {
+    "name": "pressure",
+    "SI-unit": "pascal"
+  },
+  "stress": {
+    "name": "stress",
+    "SI-unit": "pascal"
+  },
+  "energy": {
+    "name": "energy",
+    "SI-unit": "joule"
+  },
+  "work": {
+    "name": "work",
+    "SI-unit": "joule"
+  },
+  "heat": {
+    "name": "heat",
+    "SI-unit": "joule"
+  },
+  "power": {
+    "name": "power",
+    "SI-unit": "watt"
+  },
+  "radiant-flux": {
+    "name": "radiant-flux",
+    "SI-unit": "watt"
+  },
+  "electric-charge": {
+    "name": "electric-charge",
+    "SI-unit": "coulumb"
+  },
+  "electric-potential-difference": {
+    "name": "electric-potential-difference",
+    "SI-unit": "volt"
+  },
+  "capacitance": {
+    "name": "capacitance",
+    "SI-unit": "farad"
+  },
+  "electrical-resistance": {
+    "name": "electrical-resistance",
+    "SI-unit": "ohm"
+  },
+  "electrical-conductance": {
+    "name": "electrical-conductance",
+    "SI-unit": "siemens"
+  },
+  "magnetic-flux": {
+    "name": "magnetic-flux",
+    "SI-unit": "weber"
+  },
+  "magnetic-flux-density": {
+    "name": "magnetic-flux-density",
+    "SI-unit": "tesla"
+  },
+  "inductance": {
+    "name": "inductance",
+    "SI-unit": "henry"
+  },
+  "luminous-flux": {
+    "name": "luminous-flux",
+    "SI-unit": "lumen"
+  },
+  "illuminance": {
+    "name": "illuminance",
+    "SI-unit": "lux"
+  },
+  "activity-referred-to-a-radionuclide": {
+    "name": "activity-referred-to-a-radionuclide",
+    "SI-unit": "becquerel"
+  },
+  "absorbed-dose": {
+    "name": "absorbed-dose",
+    "SI-unit": "gray"
+  },
+  "kerma": {
+    "name": "kerma",
+    "SI-unit": "gray"
+  },
+  "dose-equivalent": {
+    "name": "dose-equivalent",
+    "SI-unit": "sievert"
+  },
+  "catalytic-activity": {
+    "name": "catalytic-activity",
+    "SI-unit": "katal"
+  }
+}
