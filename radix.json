@@ -1,0 +1,46 @@
+"radix" {
+  "binary": {
+    "name":  "binary",
+    "symbol": "b",
+    "base": 2
+    "characters": "01
+  }
+  "quad": {
+    "name":  "quad",
+    "symbol": "q",
+    "base": 4, 
+    "characters": "0123"
+    }
+  "octal": {
+    "name":  "octal",
+    "symbol": "o", 
+    "base": 8,
+    "characters": "01234567"
+  }
+  "decimal": {
+    "name":  "decimal",
+    "symbol": "d",
+    "base": 10,
+    "characters": "0123456789"  
+  }
+  "hexadecimal":{
+    "name":  "hexadecimal",
+    "symbol": "h",
+    "base": 16,
+    "characters": "0123456789abcdef"
+  }
+  "base60": {
+    "name": "base60"
+    "symbol": "b60"
+    "base": 60,
+    "characters: "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX"
+    
+  }
+  "base64": {
+    "name": "base64",
+    "symbol": "b64b",
+    "base": 64,
+    "characters": "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?!"
+  }
+  
+}
